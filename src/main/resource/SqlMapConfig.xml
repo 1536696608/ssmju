@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--    <properties resource="jdbcConfig.properties"></properties>-->
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="pooled">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/ssm?useUnicode=true&amp;characterEncoding=utf8"/>
+                <property name="username" value="root"/>
+                <property name="password" value="2371337"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper class="com.ju.dao.AccountDao"></mapper>
+<!--        <mapper resource="com/itheima/dao/AccountDao.xml"/>-->
+    </mappers>
+</configuration>
+<!--        properties 文件中的内容：-->
+<!--        jdbc.driver=com.mysql.jdbc.Driver-->
+<!--        jdbc.url=jdbc:mysql://localhost:3306///ssmdb1-->
+<!--        jdbc.username=root-->
+<!--        jdbc.password=admin-->
