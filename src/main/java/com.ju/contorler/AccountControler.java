@@ -30,7 +30,7 @@ public class AccountControler {
 
     @RequestMapping("/findall")
     public String findAll(Model model){
-        System.out.println("表现层查询所有信息");
+        System.out.println("表现层查询所有信息+1111111111111111111111111aa");
         List<Account> accounts = accountService.findall();
 //        Account account = new Account();
 //        account.setName("yy");
